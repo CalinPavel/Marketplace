@@ -6,6 +6,7 @@ Assignment 1
 March 2021
 """
 
+from threading import Lock, currentThread
 
 class Marketplace:
     """
@@ -19,13 +20,24 @@ class Marketplace:
         :type queue_size_per_producer: Int
         :param queue_size_per_producer: the maximum size of a queue associated with each producer
         """
+
+        self.queue_size_per_producer = queue_size_per_producer
+
+        self.return_producer_id = Lock() #register producer
+        self.producer_queue = []
+        self.products = []
+        self.producers_dic = {}
+
         pass
 
     def register_producer(self):
         """
         Returns an id for the producer that calls this.
         """
-        pass
+
+        with self.return_producer_id:
+            self.producer_queue.append(0)
+            return len(self.producer_queue)-1
 
     def publish(self, producer_id, product):
         """
@@ -39,6 +51,18 @@ class Marketplace:
 
         :returns True or False. If the caller receives False, it should wait and then try again.
         """
+
+        id = int(producer_id)
+
+        if self.producer_queue[id] >= self.queue_size_per_producer:
+            return False
+        
+        self.producer_queue[id] += 1
+        self.products.append(product)
+        self.producers_dic[product] = id
+
+        return True
+
         pass
 
     def new_cart(self):
