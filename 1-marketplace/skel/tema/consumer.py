@@ -42,4 +42,22 @@ class Consumer(Thread):
         pass
 
     def run(self):
-        pass
+
+        for i in range(len(self.carts)):
+            cart_id = self.marketplace.new_cart()
+
+            for j in self.carts[i]:
+                count=0
+
+                while count < int(j["quantity"]):
+                    if j["type"] == "remove":
+                        out = self.marketplace.remove_from_cart(cart_id,j["product"])
+                    else:
+                        out = self.marketplace.add_to_cart(cart_id,j["product"])
+
+                    if out is None or out:
+                        count +=1
+                    else:
+                        time.sleep(self.retry_wait_time)
+
+            self.marketplace.place_order(cart_id)
