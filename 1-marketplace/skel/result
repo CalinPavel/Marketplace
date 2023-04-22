@@ -1,33 +1,35 @@
 Starting test 1
 Finished test 1
-Test 1:		PASSED
+Test 1:		FAILED
 Starting test 2
 Finished test 2
-Test 2:		PASSED
+Test 2:		FAILED
 Starting test 3
 Finished test 3
-Test 3:		PASSED
+Test 3:		FAILED
 Starting test 4
 Finished test 4
-Test 4:		PASSED
+Test 4:		FAILED
 Starting test 5
 Finished test 5
-Test 5:		PASSED
+Test 5:		FAILED
 Starting test 6
 Finished test 6
-Test 6:		PASSED
+Test 6:		FAILED
 Starting test 7
 Finished test 7
-Test 7:		PASSED
+Test 7:		FAILED
 Starting test 8
+TIMEOUT. Test 8 exceeded maximum allowed time of 30
 Finished test 8
-Test 8:		PASSED
+Test 8:		FAILED
 Starting test 9
 Finished test 9
-Test 9:		PASSED
+Test 9:		FAILED
 Starting test 10
+TIMEOUT. Test 10 exceeded maximum allowed time of 60
 Finished test 10
-Test 10:		PASSED
+Test 10:		FAILED
 ************* Module /home/cali/Files/Labz/ASC/Tema1Repo/1-marketplace/skel/pylintrc
 pylintrc:1:0: E0015: Unrecognized option found: no-space-check (unrecognized-option)
 pylintrc:1:0: R0022: Useless option value for '--disable', 'print-statement' was removed from pylint, see https://github.com/PyCQA/pylint/pull/4942. (useless-option-value)
@@ -107,20 +109,41 @@ pylint: Command line or configuration file:1: UserWarning: Specifying exception 
 tema/consumer.py:42:8: W0107: Unnecessary pass statement (unnecessary-pass)
 tema/consumer.py:46:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
 ************* Module marketplace
-tema/marketplace.py:31:32: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:35:42: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:64:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:108:28: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:109:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:112:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:145:0: C0304: Final newline missing (missing-final-newline)
-tema/marketplace.py:60:8: W0622: Redefining built-in 'id' (redefined-builtin)
-tema/marketplace.py:60:8: C0103: Variable name "id" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
-tema/marketplace.py:107:15: C0121: Comparison 'check == False' should be 'check is False' if checking for the singleton value False, or 'not check' if testing for falsiness (singleton-comparison)
-tema/marketplace.py:87:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-tema/marketplace.py:143:22: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
-tema/marketplace.py:143:44: W4902: Using deprecated method getName() (deprecated-method)
-tema/marketplace.py:143:44: W4902: Using deprecated method currentThread() (deprecated-method)
+tema/marketplace.py:62:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:82:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:120:30: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:122:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:126:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:148:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:159:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+tema/marketplace.py:160:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:161:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:202:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:241:0: C0304: Final newline missing (missing-final-newline)
+tema/marketplace.py:9:0: E0401: Unable to import 'tema.product' (import-error)
+tema/marketplace.py:10:0: E0401: Unable to import 'tema.producer' (import-error)
+tema/marketplace.py:22:0: C0413: Import "from threading import Lock, currentThread" should be placed at the top of the module (wrong-import-position)
+tema/marketplace.py:78:8: W0622: Redefining built-in 'id' (redefined-builtin)
+tema/marketplace.py:78:8: C0103: Variable name "id" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
+tema/marketplace.py:123:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+tema/marketplace.py:127:15: C0121: Comparison 'check == False' should be 'check is False' if checking for the singleton value False, or 'not check' if testing for falsiness (singleton-comparison)
+tema/marketplace.py:158:8: W0702: No exception type(s) specified (bare-except)
+tema/marketplace.py:176:22: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tema/marketplace.py:176:44: W4902: Using deprecated method getName() (deprecated-method)
+tema/marketplace.py:182:0: C0115: Missing class docstring (missing-class-docstring)
+tema/marketplace.py:198:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:204:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:208:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:212:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:220:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:230:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:12:0: C0411: standard import "import threading" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:14:0: C0411: standard import "import logging" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:15:0: C0411: standard import "from logging.handlers import RotatingFileHandler" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:22:0: C0411: standard import "from threading import Lock, currentThread" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:9:0: W0611: Unused Coffee imported from tema.product (unused-import)
+tema/marketplace.py:10:0: W0611: Unused Producer imported from tema.producer (unused-import)
+tema/marketplace.py:22:0: W0611: Unused currentThread imported from threading (unused-import)
 ************* Module producer
 tema/producer.py:51:0: C0303: Trailing whitespace (trailing-whitespace)
 tema/producer.py:58:0: C0305: Trailing newlines (trailing-newlines)
@@ -129,7 +152,7 @@ tema/producer.py:43:8: W0107: Unnecessary pass statement (unnecessary-pass)
 tema/producer.py:48:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.98/10 (previous run: 7.98/10, +0.00)
+Your code has been rated at 7.01/10 (previous run: 6.88/10, +0.12)
 
 TIMEOUT. Tests exceeded maximum allowed time of 360
 
@@ -214,20 +237,41 @@ pylint: Command line or configuration file:1: UserWarning: Specifying exception 
 tema/consumer.py:42:8: W0107: Unnecessary pass statement (unnecessary-pass)
 tema/consumer.py:46:8: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
 ************* Module marketplace
-tema/marketplace.py:31:32: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:35:42: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:64:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:108:28: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:109:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:112:0: C0303: Trailing whitespace (trailing-whitespace)
-tema/marketplace.py:145:0: C0304: Final newline missing (missing-final-newline)
-tema/marketplace.py:60:8: W0622: Redefining built-in 'id' (redefined-builtin)
-tema/marketplace.py:60:8: C0103: Variable name "id" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
-tema/marketplace.py:107:15: C0121: Comparison 'check == False' should be 'check is False' if checking for the singleton value False, or 'not check' if testing for falsiness (singleton-comparison)
-tema/marketplace.py:87:4: R1710: Either all return statements in a function should return an expression, or none of them should. (inconsistent-return-statements)
-tema/marketplace.py:143:22: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
-tema/marketplace.py:143:44: W4902: Using deprecated method getName() (deprecated-method)
-tema/marketplace.py:143:44: W4902: Using deprecated method currentThread() (deprecated-method)
+tema/marketplace.py:62:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:82:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:120:30: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:122:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:126:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:148:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:159:0: W0311: Bad indentation. Found 16 spaces, expected 12 (bad-indentation)
+tema/marketplace.py:160:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:161:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:202:0: C0303: Trailing whitespace (trailing-whitespace)
+tema/marketplace.py:241:0: C0304: Final newline missing (missing-final-newline)
+tema/marketplace.py:9:0: E0401: Unable to import 'tema.product' (import-error)
+tema/marketplace.py:10:0: E0401: Unable to import 'tema.producer' (import-error)
+tema/marketplace.py:22:0: C0413: Import "from threading import Lock, currentThread" should be placed at the top of the module (wrong-import-position)
+tema/marketplace.py:78:8: W0622: Redefining built-in 'id' (redefined-builtin)
+tema/marketplace.py:78:8: C0103: Variable name "id" doesn't conform to snake_case naming style ('([^\\W\\dA-Z][^\\WA-Z]{2,}|_[^\\WA-Z]*|__[^\\WA-Z\\d_][^\\WA-Z]+__)$' pattern) (invalid-name)
+tema/marketplace.py:123:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+tema/marketplace.py:127:15: C0121: Comparison 'check == False' should be 'check is False' if checking for the singleton value False, or 'not check' if testing for falsiness (singleton-comparison)
+tema/marketplace.py:158:8: W0702: No exception type(s) specified (bare-except)
+tema/marketplace.py:176:22: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+tema/marketplace.py:176:44: W4902: Using deprecated method getName() (deprecated-method)
+tema/marketplace.py:182:0: C0115: Missing class docstring (missing-class-docstring)
+tema/marketplace.py:198:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:204:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:208:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:212:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:220:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:230:4: C0116: Missing function or method docstring (missing-function-docstring)
+tema/marketplace.py:12:0: C0411: standard import "import threading" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:14:0: C0411: standard import "import logging" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:15:0: C0411: standard import "from logging.handlers import RotatingFileHandler" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:22:0: C0411: standard import "from threading import Lock, currentThread" should be placed before "from tema.product import Product, Coffee, Tea" (wrong-import-order)
+tema/marketplace.py:9:0: W0611: Unused Coffee imported from tema.product (unused-import)
+tema/marketplace.py:10:0: W0611: Unused Producer imported from tema.producer (unused-import)
+tema/marketplace.py:22:0: W0611: Unused currentThread imported from threading (unused-import)
 ************* Module producer
 tema/producer.py:51:0: C0303: Trailing whitespace (trailing-whitespace)
 tema/producer.py:58:0: C0305: Trailing newlines (trailing-newlines)
@@ -236,5 +280,5 @@ tema/producer.py:43:8: W0107: Unnecessary pass statement (unnecessary-pass)
 tema/producer.py:48:12: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
 
 ------------------------------------------------------------------
-Your code has been rated at 7.98/10 (previous run: 7.98/10, +0.00)
+Your code has been rated at 7.01/10 (previous run: 7.01/10, +0.00)
 
