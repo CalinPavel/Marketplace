@@ -39,10 +39,7 @@ class Consumer(Thread):
         self.marketplace = marketplace
         self.retry_wait_time = retry_wait_time
 
-        pass
-
     def run(self):
-
         for i in range(len(self.carts)):
             cart_id = self.marketplace.new_cart()
 
